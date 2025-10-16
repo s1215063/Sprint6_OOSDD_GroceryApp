@@ -48,7 +48,6 @@ namespace Grocery.App.ViewModels
 
             _productService.Add(product);
 
-            // Clear all input fields after adding the product
             ClearInputFields();
         }
 
