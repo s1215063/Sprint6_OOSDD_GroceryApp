@@ -11,14 +11,14 @@ namespace Grocery.Core.Data.Repositories
 
         public GroceryListItemsRepository()
         {
-            //create table
             CreateTable(@"CREATE TABLE IF NOT EXISTS GroceryListItem (
                             [Id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                             [GroceryListId] INTEGER NOT NULL,
                             [ProductId] INTEGER NOT NULL,
                             [Amount] INTEGER NOT NULL,
                             FOREIGN KEY(GroceryListId) REFERENCES GroceryList(Id),
-                            FOREIGN KEY(ProductId) REFERENCES Product(Id))");
+                            FOREIGN KEY(ProductId) REFERENCES Product(Id),
+                            UNIQUE(GroceryListId, ProductId))");
             List<string> insertQueries = [@"INSERT OR IGNORE INTO GroceryListItem(GroceryListId, ProductId, Amount) VALUES(1, 1, 3)",
                                           @"INSERT OR IGNORE INTO GroceryListItem(GroceryListId, ProductId, Amount) VALUES(1, 2, 1)",
                                           @"INSERT OR IGNORE INTO GroceryListItem(GroceryListId, ProductId, Amount) VALUES(1, 3, 4)",
