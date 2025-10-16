@@ -34,6 +34,11 @@ namespace Grocery.App.ViewModels
         {
             if (Client.Role == Role.Admin) await Shell.Current.GoToAsync(nameof(BoughtProductsView), true);
         }
+        [RelayCommand]
+        public async Task ShowNewProduct()
+        {
+            if (Client.Role == Role.Admin) await Shell.Current.GoToAsync(nameof(NewProductView), true);
+        }
 
         public override void OnAppearing()
         {

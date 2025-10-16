@@ -1,20 +1,51 @@
-#GroceryApp sprint5 Studentversie  
-Dit is de startversie voor studenten van sprint 6.  
+# GroceryApp sprint5
+
+Gitflow Workflow
+
+Voor dit project word er gebruik gemaakt van de Gitflow methode om de ontwikkeling gestructureerd en overzichtelijk te houden.
+
+Binnen Gitflow worden de volgende branches gebruikt:
+
+
+## main
+Bevat de stabiele, productierijpe code. Alles in deze branch is getest en klaar om in productie te gebruiken.
+
+
+## develop
+De integratiebranch waarin alle nieuwe features samengevoegd worden. Hier staat altijd de laatste werkende ontwikkelversie.
+
+
+## feature/…
+Voor iedere nieuwe user case of functionaliteit wordt een aparte feature branch aangemaakt.
+
+- feature/UC18 → voor de uitwerking van Use Case 18.
+- feature/UC19 → voor de uitwerking van Use Case 19.
+
+
+Zodra een feature klaar is, wordt deze terug samengevoegd in de develop branch.
+
+
+## release/…
+Wanneer een nieuwe versie bijna klaar is, wordt er een release branch aangemaakt vanuit develop. Hierin worden enkel nog documentatie-updates gedaan, zodat de release stabiel wordt.
+
+
+## hotfix/…
+ Voor dringende fouten in de main branch die snel opgelost moeten worden, zonder te wachten op een nieuwe release.
+
+
+
+# New features
  
-UC17 Boodschappenlijst in database is compleet uitgewerkt.  
+## UC17 Boodschappenlijst in database 
+- Boodschappenlijsten worden nu in de database opgeslagen.
 
-UC18 BoodschappenlijstItems in database.  
-- Gebruik het voorbeeld van UC17 om zelf de GroceryListItemsRepository tew ijzigen zodat boodschappenlijstitems uit de database komen.  
+## UC18 BoodschappenlijstItems in database.  
+- De producten in booschappenlijsten worden nu in de database opgeslagen.  
 
-UC19 Product in database en nieuw product aanmaken --> zelfstandig uitwerken.  
-- Volg UC17 om producten uit de database te kunnen halen.  
-- De Add() functie in ProductService moet uitgewerkt zijn om nieuwe producten te kunnen aanmaken.  
-- Maak een NewProductViewModel om het aanmaken van nieuwe producten te ondersteunen. Alleen gebruikers met de admin Role mogen nieuwe producten aanmaken.  
-- Maak een NewProductView voor het invoerscherm.  
-- Voeg een ToolbarItemn toe aan de ProductView, zodat vanuit dit scherm nieuwe producten kunnen worden aangemaakt.  
-- Zorg ervoor dat als er een nieuw product is aangemaakt, deze meteen zichtbaar is in de Productlijst van de ProductView.  
-- Denk aan de registratie van de View, ViewModel en registreren van de route naar NewProductView.  
-
+## UC19 Product in database en nieuw product aanmaken
+- Producten worden nu opgeslagen in de database
+- Gebruikers met Admin rechten hebben de toeging tot "NewProductView"
+- Gebruikers met Admin rechten kunnen nieuwe producten toevoegen aan de database
 
 
 

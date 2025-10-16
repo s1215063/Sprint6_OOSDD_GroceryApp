@@ -9,6 +9,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="{Binding Client.Name}" Command="{Binding ShowBoughtProductsCommand}"/>
+        <ToolbarItem Text="Add products" Command="{Binding ShowNewProductCommand}"/>
     </ContentPage.ToolbarItems>
 
     <Shell.TitleView>
